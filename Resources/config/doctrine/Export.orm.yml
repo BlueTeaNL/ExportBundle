@@ -1,0 +1,32 @@
+Bluetea\ExportBundle\Entity\Export:
+    type: entity
+    table: export
+    id:
+        id:
+            id: true
+            type: integer
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            length: 255
+        filePath:
+            type: string
+            length: 255
+            nullable: true
+        exportType:
+            type: string
+            length: 255
+        datetime:
+            type: datetime
+        status:
+            type: string
+            length: 255
+        progress:
+            type: float
+    lifecycleCallbacks:
+        prePersist:
+            - updateDatetime
+        preUpdate:
+            - updateDatetime

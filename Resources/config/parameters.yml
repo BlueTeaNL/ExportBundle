@@ -1,0 +1,3 @@
+parameters:
+    bluetea_export.chain.class: Bluetea\ExportBundle\Services\ExportChain
+    bluetea_export.export_manager.class: Bluetea\ExportBundle\Doctrine\ExportManager

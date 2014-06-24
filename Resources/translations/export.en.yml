@@ -1,0 +1,5 @@
+bluetea_export.to_much_errors: The maximum amount of error threshold is reached. The export is aborted.
+bluetea_export.start_export: The export is started
+bluetea_export.end_export: The export is ended
+bluetea_export.entity_invalid: The entity is invalid
+bluetea_export.em_error: The database engine throwed an error
