@@ -24,11 +24,3 @@ services:
 
     bluetea_export.chain:
         class: %bluetea_export.chain.class%
-
-    acme_export.your_export_type:
-        class: Bluetea\ExportBundle\Export\Type\ExampleExportType
-        arguments:
-            - @service_container
-            - @bluetea_export.entity_manager
-        tags:
-            - { name: bluetea_export.export_type, description: 'test' }
