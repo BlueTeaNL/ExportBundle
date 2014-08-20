@@ -70,12 +70,8 @@ class Export
         $event = new ExportEvent($this->exportType);
         $this->eventDispatcher->dispatch(BlueteaExportEvents::EXPORT_INITIALIZE, $event);
 
-        // Try to export
-        try {
-            $this->exportType->export();
-        } catch (\Exception $exception) {
-            $exportEntity->setStatus(\Bluetea\ExportBundle\Model\Export::ERROR);
-        }
+        // Export
+        $this->exportType->export();
 
         // Dispatch EXPORT_SUCCESS event
         $event = new GetStatusEvent($this->exportType);
